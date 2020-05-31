@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href="./includes/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Open+Sans&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"  crossorigin="anonymous">
+    
+    <title>Shaker - New Project</title>
+</head>
+<body>
+  <header>            
+    <a href="index.html" id="logo"></a>
+
+  <ul>
+    <li><a href="#" class="profileIcon"></a></li>
+    <li><a href="#" class="bellIcon"></a> </li>
+    <li><a href="#" class="heartIcon"></a></li>
+    <li><a href="form.html" class="plusIcon"></a></li>
+  </ul>
+
+</header>
+    <nav class = navbar>
+      <nav class="navbar navbar navbar-expand-lg navbar-light bg-light">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="myProjects.html">My projects</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">New project<span class="sr-only">(current)</span></a>
+          </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Faculties</a>
+            </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Barter</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+      </nav>
+    </nav>
+
+<div class="breadc">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">New project</li>
+      </ol>
+    </nav>
+  </div>
+
+  <main class="form_wrapper">
+      <form action="myProjects.html" method="get" onsubmit="return checkForm();"> 
+        <div class="questions">
+            <label>Full Name:
+              <input type="text" name="fullName" pattern="(\w.+\s).+" required title="Please enter name and last name">
+            </label><br>
+            <label>E-mail:
+              <input type="email" name="mail" required title="Please enter an email" value="">
+            </label><br>
+            <label>Phone:
+              <input type="tel" name="phone" pattern="\d{9,10}" required title="Must contain 9-10 digits only" value="">
+            </label><br>
+            <hr>
+              <label>Project Name:
+                  <input type="text" name="projectName"  required title="Please enter project name">
+              </label><br>
+              <label>Key Word:
+              <input type="text" name="keyWord" pattern="^\w+$" required title="Please enter one key word"> 
+              </label><br>
+              <label>Project description:
+                  <textarea rows="10" cols="30" required title="Please enter description"></textarea>
+              </label><br>
+              <label>Upload your image:
+                <input type="file" name="image"></label>
+        </div>
+          <div class="icons">
+          <span>Which departments would you like to collaborate with?</span><br>
+          <label><img src="./images/departmentsIcons/fashion.png" alt="Fashion Design" title="Fashion Design"><input type="checkbox" name="Departments[]" value="Fashion Design">&nbsp;</label>
+          <label><img src="./images/departmentsIcons/art.png" alt="art" title="art"><input type="checkbox" name="Departments[]" value="art">&nbsp;</label>
+          <label><img src="./images/departmentsIcons/chemical.png" alt="Chemical Engineering" title="Chemical Engineering"><input type="checkbox" name="Departments[]" value="Chemical Engineering">&nbsp;</label>
+          <label><img src="./images/departmentsIcons/jewellery.png" alt="Jewellery Design" title="Jewellery Design"><input type="checkbox" name="Departments[]" value="Jewelry Design">&nbsp;</label>
+          <label><img src="./images/departmentsIcons/graphic.png" alt="Graphic Design" title="Graphic Design"><input type="checkbox" name="Departments[]" value="Graphic Design">&nbsp;</label>
+          <label><img src="./images/departmentsIcons/electric.png" alt="Electrical & Electronic Engineering" title="Electrical & Electronic Engineering"><input type="checkbox" name="Departments[]" value="Electrical & Electronic Engineering">&nbsp;</label>
+          <label><img src="./images/departmentsIcons/software.png" alt="Software Engineering" title="Software Engineering"><input type="checkbox" name="Departments[]" value="Software Engineering">&nbsp;</label>
+          <label><img src="./images/departmentsIcons/indus.png" alt="Industrial Engineering" title="Industrial Engineering"><input type="checkbox" name="Departments[]" value="Industrial Engineering">&nbsp;</label>
+          <label><img src="./images/departmentsIcons/textile.png" alt="Textil Design" title="Textil Design"><input type="checkbox" name="Departments[]" value="Textil Engineering">&nbsp;</label><br>
+          </div>
+          <br>
+          <div class="finishedButton">
+            <input type="submit"  value="Let's shake together!" > 
+          </div>  
+    </form>
+  </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="./includes/js/formJS.js"></script>
+</body>
+</html>
